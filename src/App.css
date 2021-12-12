@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: #272727;
   color: white;
+  margin: 0;
+  padding: 0.2rem;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.listwrap {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}
+.listwrap::-webkit-scrollbar {
+  display: none;
+}
+.moviecard img {
+  max-height: 40vh;
+  margin: 0;
+}
+.moviecard p {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.moviecard {
+  margin: 5px;
+  cursor: pointer;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  font-size: 1.2rem;
+  margin-left: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+}
+h1 {
+  margin: 0;
+}
+.favouritestab {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+.imgcont {
+  position: relative;
+}
+.imgcont:hover {
+  transform: scale(108%);
+  transition: 0.2s;
+  opacity: 0.5;
+}
+.imgcont:hover .favouritestab {
+  opacity: 0.8;
+  transition: 0.8 ease;
+}
+p {
+  white-space: break-spaces;
+  overflow-wrap: break-word;
+  width: 13vw;
+  font-size: 1rem;
+}
+.typecont {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.typebar::-webkit-scrollbar {
+  display: none;
+}
+*:focus {
+  outline: none;
+}
+.typebar {
+  width: 10vw;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  background-color: white;
+  cursor: pointer;
+  padding: 0.2rem;
+  background-color: transparent;
+  color: white;
 }
